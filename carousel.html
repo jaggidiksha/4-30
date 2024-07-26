@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;"> 
+        <h1><i>CAROUSEL IN JS</i></h1>
+    <button onclick="pre()">previous</button>
+   <img src="https://media.istockphoto.com/id/490506050/photo/living-painting-young-woman-completely-covered-with-thick-paint.webp?b=1&s=170667a&w=0&k=20&c=oUfi7SWlTRxTAwMtH2GDgZR4P7k21fhOFvpTp_RXqto=" alt="" id="image" height="500px" width="500px">
+    <button onclick="next()">next</button>
+</div>
+    <script>
+
+images=["https://media.istockphoto.com/id/482970379/photo/old-indian-door.webp?b=1&s=170667a&w=0&k=20&c=RpRS0HLBHnJZtjdIGu1M4yKsZ41PbgaxbOrEa1Rajoc=","https://media.istockphoto.com/id/1382204548/photo/lord-shiva-hindu-god-stock-photo.webp?b=1&s=170667a&w=0&k=20&c=o8IynHJ2VhwIhzQXBR9TJK3wBt-EchouwPNkVNcOh8Q=","https://media.istockphoto.com/id/865586624/photo/man-sitting-on-globe-with-the-laptop-on-top-of-the-world.jpg?s=612x612&w=0&k=20&c=tdcfoAjU0dzXuRewPgoQMxquN6CpGsstxsV6IldZpDM="]
+
+currentindex=0
+function pre(){
+
+currentindex=(currentindex-1+images.length) %images.length
+update()
+
+}
+function next(){
+
+currentindex=(currentindex+1) %images.length
+update()
+
+}
+
+function update(){
+    document.getElementById("image").src=images[currentindex]
+}
+   
+    </script>
+    
+</body>
+</html>
