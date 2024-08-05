@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">hello html page </p>
+    <button onclick='document.getElementById("para").innerHTML="hello javascript"'>update text</button>
+    <script>
+        //three scoping :
+
+        //global scoping : the variables which are declared outside of the function  are known as global variabels ,and the concept is called global scoping , all the global variables can be accessed locally 
+
+        // let a="diksha";
+     
+
+
+        //local scoping:the variables which are declared inside the function are called local variables and the concept is called local scoping , all the local varibales can not be accessed globally
+
+
+        // function abc (){
+        //     let b="jaggi"
+        //     document.write(b)
+        //     document.write(a)
+        // }
+        // abc ()
+
+
+
+        //lexical scoping/ closures:es6 
+        //the  closure in action says that we have two functions , one is outerfunction and the other one is innerfunction , the innerfuntion can have the access to the outerfunction variabels as well as parameters
+
+
+        //arrow functions :
+
+        //syntax:
+        // const functionname=()=>{
+        //     //statement
+        // }
+        // functionname()
+
+
+//         const outerfun=(b)=>{
+//           let a=90;
+
+//              const innerfun=()=>{
+//              let sum=a+b;
+
+//    console.log(`the sum of two numbers is  ${sum} `)
+
+
+//              }
+//              innerfun()
+
+//         }
+//         outerfun(20)
+
+        //output: the sum of two numbers is 110
+        //the sum of two numbers is : string 
+        //110: sum: {expression}
+
+        //string+expression: template literals / backticks 
+
+        //expression : ${expressioname} : string interpolation
+
+
+
+
+        //DOM: document object model 
+        //dom is a technology with the helpof which we can completely control any html document with the help of js , we can change or manipulate any id , class , attribute , tag 
+
+
+        //real dom :
+        //the real dom is the actual dom that is present in the browser , it is the actual tree like structure of the web page 
+        //img 
+        //p
+        //update 
+
+        //
+
+        //virtual dom :
+
+        // document.getElementById("")
+
+        // document.getElementById("").innerHTML
+        // document.getElementById("").value 
+        // document.getElementById("").textContent
+        
+
+        //event listeners: which listenes to some particular events :
+        //eg :
+        //onclick
+        //onsubmit
+        //onchange 
+
+</script>
+    
+</body>
+</html>
