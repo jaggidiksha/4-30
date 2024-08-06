@@ -6,9 +6,101 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="para">hello html page </p>
-    <button onclick='document.getElementById("para").innerHTML="hello javascript"'>update text</button>
+
+    first number<input type="number" id="first"><br><br>
+    second number<input type="number" id="second"><br><br>
+
+    <button onclick="add()">+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button>
+
+<div style="text-align: center;">
+    <h1>STUDENT FORM</h1>
+    <form action="" id="studentform">
+        <label for="name">name</label>
+        <input type="text " id="name">
+        <br><BR>
+        <label>age</label>
+        <input type="number" id="age">
+        <br><BR>
+        <label>Address</label>
+        <input type="text" id="address">
+        <br><br>
+        <label>email</label>
+        <input type="email" id="email">
+        <br><br>
+        <label>date</label>
+        <input type="date" id="date">
+        <br><br>
+        <label>time</label>
+        <input type="time" id="time"><br><br>
+        <input type="submit">
+    </form>
+</div>
+    <!-- <button onclick="off()">off</button>
+    <img src="https://cdn.vectorstock.com/i/1000v/60/94/cartoon-glowing-yellow-light-bulb-vector-18016094.jpg" alt="" style="height:300px" id="image">
+    <button onclick="on()">on</button> -->
+
+    <!-- <form action="">
+        <label for="">first value</label>
+        <input type="text" id="first"><br><br>
+        <label for="">second value</label>
+        <input type="text" id="second">
+    </form>
+    <button onclick="same()">click me!</button> -->
+    <!-- <p id="para">hello html page </p>
+    <button onclick='document.getElementById("para").innerHTML="hello javascript"'>update text</button> -->
     <script>
+let form=document.getElementById("studentform")
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value
+console.log("name:",name)
+}
+
+
+)
+        function add(){
+          let a= parseInt(document.getElementById("first").value)
+          let b=parseInt(document.getElementById("second").value)
+          document.write(a+b)
+        }
+//parseInt: it parses a string and returns an interger
+//parse:to resolve a sentence into its components
+
+//syntax:parseInt(string,radix)
+
+//radix: specify which numerical system to be used , optional ,
+//always the first value of the string is returned
+
+// let a="he was 50"
+// let b=parseInt(a)
+// document.write(b)
+
+
+        // function off(){
+        //     document.getElementById("image").src="https://cdn.vectorstock.com/i/1000v/70/44/3d-realistic-off-light-bulb-icon-closeup-vector-27407044.jpg"
+        // }
+
+        // function on(){
+        //     document.getElementById("image").src="https://cdn.vectorstock.com/i/1000v/60/94/cartoon-glowing-yellow-light-bulb-vector-18016094.jpg"
+        // }
+
+        // function same(){
+           
+        //  let a=   document.getElementById("first").value
+        //  let b=   document.getElementById("second").value
+
+        //  if (a==b){
+        //     document.write("both values are same")
+        //  }else{
+        //     document.write("both values are different")
+        //  }
+        // }
+
         //three scoping :
 
         //global scoping : the variables which are declared outside of the function  are known as global variabels ,and the concept is called global scoping , all the global variables can be accessed locally 
