@@ -8,7 +8,7 @@
 <body>
     <div style="text-align: center;">
         <h1>STUDENT FORM</h1>
-        <form action="" id="studentform">
+        <form action="" id="studentform" onsubmit="add()">
             <label for="name">name</label>
             <input type="text " id="name">
             <br><BR>
@@ -48,15 +48,39 @@
     <p id="result"></p> -->
 
 
-    <ul>Fruits
-        <li class="list-item">Mango</li>
-        <li class="list-item">Apple</li>
-        <li class="list-item">Banana</li>
-        <li class="list-item">Orange</li>
-        <li class="list-item">Litchi</li>
-    </ul>
     <script>
 
+    function add(e){
+    e.preventDefault();
+
+ let name=document.getElementById("name").value;
+ let age=document.getElementById("age").value;
+ let address=document.getElementById("address").value;
+ let email=document.getElementById("email").value;
+ let date =document.getElementById("date").value;
+ let time =document.getElementById("time").value;
+
+
+ var formdata={
+"name":name,
+"age":age,
+"address":address,
+"email":email,
+"date":date,
+"time":time
+ }
+
+ let jsondata=JSON.stringify(formdata)
+ localStorage.setItem("formdata",jsondata)
+
+ //reset
+ document.getElementById("studentform").reset()
+
+ //alert
+ alert("Form submitted successfully to local storage")
+
+
+}
 
 //localStorage : it is client side web storage feature , that allows us to store the data as a key value pair
 
@@ -136,6 +160,21 @@
     //     }
     //     displayinteger()
 //!isNaN:!string:number
+
+//json:javascript object notation, array of objects
+
+// [
+//     {
+//         "name": "john",
+//     },
+//     {
+//         "name": "jane",
+//     }
+// ]
+
+
+//JSON.stringify:json>strings
+//JSON.parse:strings>json
     </script>
     
 </body>
