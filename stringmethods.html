@@ -6,15 +6,33 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="clock">
+
+    </div>
     <script>
+
+        function updateclock(){
+      
+            const now=new Date();
+            const h=now.getHours();
+            const m=now.getMinutes();
+            const s=now.getSeconds();
+            const period=(h>12)?"PM":"AM"
+            let timestring=`${h}:${m}:${s} ${period}`
+
+            document.getElementById("clock").textContent=timestring;
+
+        }
+        setInterval(updateclock,1000)
+        updateclock()
         //strings :strings are used to store and manipulate text
         //to create a string we use the following syntax:
 
-        let str="hello world!";
-        document.write(str+"<br>")
+        // let str="hello world!";
+        // document.write(str+"<br>")
 
-        //to check length
-        document.write(str.length+"<br>")
+        // //to check length
+        // document.write(str.length+"<br>")
 
 
         //string interpolation:
@@ -133,9 +151,86 @@
 
 
 
+//   let a="abcd";
+//   let b="";
+//   for (i=a.length-1;i>=0;i--){
+//     b+=a[i];
+//   }
+//   console.log(b)
+
+// let a="helli welcome to js"
+// let b=a.replace("i","o")
+// console.log(b)
+
+
+// let a="diksha jaggi";
+// let words=a.split(' ')
+// // console.log(words)
+// for (let i=0;i<words.length;i++){
+// words[i]=words[i].charAt(0).toUpperCase()+words[i].slice(1)
+// }
+// let output=words.join(' ')
+// console.log(output)
+
+
+//EVENT LOOP: it pushes tasks from task queue to call stack , single threaded, non-blocking and asynchoronous behaviour wise
+
+//task queue:when we have multiple tasks to perform we align them in a queue known as task queue
+
+// call stack :it is used to provide the memory 
+
+
+// function abc(){
+
+//     function sayhi(){
+//         return "hii"
+//     }
+//     console.log(sayhi())
+
+// }
+// abc()
+
+//op: hii
+
+//call stack: 
+//1.abc():go into the call stack
+//2.abc():sayhi() go into the call stack
+//op:hii
+//3 sayhi(): remove from call stack
+//4.abc(): remove from call stack
 
 
 
+// console.log("hii");//1
+// setTimeout(function timeout(){
+//     console.log("hello")  //3
+// },3000)
+// console.log("welcome to loop")//2
+
+
+// let timeout=setTimeout(()=>{
+//     console.log("hello")
+// },2000)
+// clearTimeout(timeout)
+
+
+// let d=new Date();
+// document.write(d+"<br>")
+
+// document.write(d.getHours()+"<br>")
+// document.write(d.getMinutes()+"<br>")
+// document.write(d.getSeconds()+"<br>")
+// document.write(d.getMonth());
+
+
+
+
+//generate a prompt box in which if we enter any string we get an alert to enter a number and when we enter a number we get the table of that number in the document
+
+
+//generate a prompt box and if we enter any number we get an alert to provide a string , when we enter a string it represents innthe document weather its a vowel or a consonant
+
+//generate  a prompt box and we enter any string so we get an alert to enter a number and when we enter a number  of any week day it represents that day in the document
 
 
     </script>
