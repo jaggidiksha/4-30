@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        /* div{
+           
+            background-color: red;
+        } */
+         #abc{
+            background-color: aqua;
+            height:200px;
+            width:400px;
+            border:2px solid green;
+         }
+    </style>
+</head>
+<body>
+    <h1>Jquery implementation</h1>
+
+<!-- <div class="abc">
+    <div id="text">
+        <h2>text box 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sit inventore nihil reiciendis ad dignissimos sapiente nisi modi commodi debitis, repellat adipisci repellendus quae? Dignissimos quasi earum voluptates doloremque excepturi.</p>
+    </div>
+    <div id="text2">
+        <h2>text box 2</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quisquam tenetur iure libero eligendi illo itaque explicabo nostrum? In atque, amet totam delectus corporis illum minima nihil dolorum quas facilis.</p>
+    </div>
+</div> -->
+
+<!-- <div id="box" class="test">
+    <h1>box 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, similique quae cumque vel est autem. Unde rerum ea voluptatem officiis voluptates. Debitis sed quasi praesentium aliquam ut quam! Nulla, doloribus?</p>
+</div>
+
+<ul id="list">
+    <li>orange</li>
+    <li class="test">apple</li>
+    <li>guava</li>
+    <li>pineapple</li>
+    <li>grapes</li>
+    <li>litchi</li>
+</ul> -->
+
+<!-- <p>hello im using jquery</p>
+<button class="hide">hide</button>
+<button class="show">Show</button> -->
+    <!-- <button>click</button> -->
+     <!-- <div id="box">
+
+     </div>
+     <button id="append">Append</button>
+     <button id="prepend">Prepend</button> -->
+
+     <!-- name:<input type="text"><br><br>
+     email<input type="text"> -->
+
+     <div id="abc">
+        <h1>this is a heading</h1>
+        <p>this is a para</p>
+        <p>this is another paragraph</p>
+     </div>
+     <button  class="bton">Empty</button>
+     <button  class="btn">remove</button>
+    <script>
+
+        $(document).ready(function(){
+        $(".bton").click(function(){
+        $("#abc").empty()
+        })
+        })
+
+        $(document).ready(function(){
+        $(".btn").click(function(){
+        $("#abc").remove()
+        })
+        })
+        // $(document).ready(function(){
+        // $("input").focus(function(){
+        //     $(this).css('background-color',"yellow")
+        // })
+
+        // $("input").blur(function(){
+        //     $(this).css('background-color',"pink")
+        // })
+        // })
+
+        // $(document).ready(function(){
+        // $("#append").click(function(){
+        // $("#box").append("<h2>diksha jaggi</h2><p>i like flowers</p>")
+        // })
+        // $("#prepend").click(function(){
+        // $("#box").prepend("<h2>diksha </h2>")
+        // })
+        // })
+        // $(document).ready(function(){
+        //     $('div').click(function(){
+        //         $('div').css("background-color","green");
+        //         $('div').dblclick(function(){
+        //             $("div").css("background-color","pink")
+        //         })
+        //     })
+        // })
+        // $(document).ready(function(){
+        //     alert(1);
+        // })
+
+        // $(document).ready(function(){
+        // $("button").click(function(){
+        //     alert("my code");
+        // })
+        // })
+
+    //     $(document).ready(function(){
+    //   var a=  $("#text").html();
+    //   console.log(a)
+    //     })
+
+    //     $(document).ready(function(){
+    //      var b=   $("#text2").html();
+    //      console.log(b)
+    //     })
+
+    // $(document).ready(function(){
+    // $("#list").css("color","red")
+    // })
+
+    // $(document).ready(function(){
+    // $(".test").css("border","2px solid red")
+    // })
+
+    // $(document).ready(function(){
+    //     $("*").css("border","2px solid green")
+    // })
+
+    // $(document).ready(function(){
+    //     $("li:first").css("border","2px solid blue")
+    // })
+
+    // $(document).ready(function(){
+    //     $("li:last").css("border","2px solid red")
+    // })
+
+    // $(document).ready(function(){
+    //     $("li:even").css("border","2px solid green")
+    // })
+
+    // $(document).ready(function(){
+    //     $("li:odd").css("border","2px solid pink")
+    // })
+
+    // $(document).ready(function(){
+    //     $(".hide").click(function(){
+    //         $("p").hide();
+    //     })
+    // })
+
+    // $(document).ready(function(){
+    //     $(".show").click(function(){
+    //         $('p').show();
+    //     })
+    // })
+    </script>
+    
+</body>
+</html>
