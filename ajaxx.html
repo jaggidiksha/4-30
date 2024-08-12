@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="runajax()" id="btn">get data</button>
+    <script>
+        //ajax:asynchronous javascript xml 
+        //xml:extensible markup language
+        //markup: whenever we use special symbols to embed our code 
+        //html: <>
+        // it is human readable as well as machine understandable language
+
+        //ajax:crud
+        //create  :POST
+        //read    :GET
+        //update  :PUT
+        //delete  :DELETE
+
+
+        //WITHOUT PAGE REFERESH
+
+        //advantages:
+        // better user experience 
+        //interaction
+        //saves network bandwidth
+
+  //ajax method: XMLHttpRequest
+  //xhr
+
+  //xhr methods
+  //xhr.open()
+  //xhr.onreadystatechange
+  //xhr.send()
+
+
+  //xhr.open("GET","filename","true")
+
+
+  //xhr.onreadystatechange=function(){
+//   if(this.readyState==4 && this.status==200){
+//     document.write(this.responseText)
+//   }
+//}
+
+
+//xhr.send()
+
+// let btn=document.getElementById("btn");
+// btn.addEventListener("click",runajax)
+
+
+// function runajax(){
+
+// let xhr=new XMLHttpRequest();
+
+// xhr.open("GET","myfile.txt","true")
+
+// xhr.onreadystatechange=function(){
+//     if(this.readyState==4 && this.status==200){
+//         document.write(this.responseText)
+//     }
+// }
+
+// xhr.send()
+
+// }
+
+// PROMISES:
+// THE promise object represents the eventual completion orfailure of an asynchronous 
+// opeartion and its resulting values 
+// introduced in es6 
+
+//  you                                 promise(meet tomorrow)                        friend
+
+
+// 1stage                                    2 stage                              3rd stage
+
+// pending                                  fulfilled                               rejected
+// until tomorrow's day                 if u go and meet                          if we have 
+//                                                                  other work and can not go 
+
+//                                      place to meet                meet other day  
+
+
+//                                             PROMISE()
+
+// RESOLVE()                                                                 REJECT()
+// THEN()                                                                   CATCH()
+ 
+// then() and catch() both are callback functions , inbuilt in js 
+
+
+
+// syntax:
+// 1.new Promise()
+
+// 2.new Promise(function(){
+
+// })
+
+// 3. new Promise(function(resolve,reject){ 
+
+// })
+
+// 4. new Promise(function(resolve,reject){
+// if(condition){
+// resolve("sucess")
+// }else{
+// reject("fail")
+// }
+// })
+
+
+// let onfulfilment=(result)=>{
+// console.log(result)
+// }
+
+// let onrejection=(error)=>{
+// console.log(error)
+// }
+
+
+// prom(true).then(onfulfilment)
+
+// prom(false).catch(onrejection)
+
+function prom(complete){
+
+return new Promise(function(resolve,reject){
+    if(complete){
+        resolve("success")
+    }else{
+        reject("fail")
+    }
+})
+}
+
+let onfulfilment=(result)=>{
+    console.log(result)
+}
+
+
+let onrejection=(error)=>{
+    console.log(error)
+}
+
+// prom(true).then(onfulfilment)
+// prom(false).catch(onrejection)
+prom(false).then(onfulfilment).catch(onrejection)
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
