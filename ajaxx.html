@@ -128,32 +128,49 @@
 
 // prom(false).catch(onrejection)
 
-function prom(complete){
+//function prom(complete){
 
-return new Promise(function(resolve,reject){
-    if(complete){
-        resolve("success")
-    }else{
-        reject("fail")
-    }
-})
-}
+// return new Promise(function(resolve,reject){
+//     if(complete){
+//         resolve("success")
+//     }else{
+//         reject("fail")
+//     }
+// })
+// }
 
-let onfulfilment=(result)=>{
-    console.log(result)
-}
+// let onfulfilment=(result)=>{
+//     console.log(result)
+// }
 
 
-let onrejection=(error)=>{
-    console.log(error)
-}
+// let onrejection=(error)=>{
+//     console.log(error)
+// }
 
 // prom(true).then(onfulfilment)
 // prom(false).catch(onrejection)
-prom(false).then(onfulfilment).catch(onrejection)
+// prom(false).then(onfulfilment).catch(onrejection)
 
+// let a=Math.random()
+// console.log(a)
 
+const mypromise=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+const randomnumber=Math.random()
+if(randomnumber>0.5){
+    resolve(randomnumber)
+}else{
+    reject(new Error("random number is too low!"))
+}
+    },1000)
+})
 
+mypromise.then((result)=>{
+console.log("Success! Random number is ",result)
+}).catch((error)=>{
+console.log("error",error.message)
+})
 
 
 
